@@ -5,23 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
     <title>Admin Dashboard</title>
 </head>
 <body>
     <nav>
-        <h1>Dashboard</h1>
+        <h1><i class="mdi mdi-view-dashboard"> </i>Dashboard</h1>
         <ul>
-            <li>Home</li>
-            <li>Profile</li>
-            <li>Messages</li>
-            <li>History</li>
-            <li>Tasks</li>
-            <li>Communities</li>
+            <li><i class="mdi mdi-home"></i> Home</li>
+            <li><i class="mdi mdi-account-details-outline"></i> Profile</li>
+            <li><i class="mdi mdi-message-reply"></i> Messages</li>
+            <li><i class="mdi mdi-clock-time-three"></i> History</li>
+            <li><i class="mdi mdi-file-multiple"></i> Tasks</li>
+            <li><i class="mdi mdi-account-group"></i> Communities</li>
         </ul>
         <ul>
-            <li>Settings</li>
-            <li>Support</li>
-            <li>Privacy</li>
+            <li><i class="mdi mdi-cog"></i> Settings</li>
+            <li><i class="mdi mdi-help-box"></i> Support</li>
+            <li><i class="mdi mdi-shield-check"></i> Privacy</li>
         </ul>
     </nav>
     <header>
@@ -41,72 +42,42 @@
     </header>
     <main>
         <h1>Your Projects</h1>
-        <section class="card">
+        <custom-card class="card">
             <h1>Super Cool Project</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
             </p>
-            <form action="post">
-                <input type="image">
-                <input type="image">
-                <input type="image">
-            </form>
-        </section>
-        <section class="card">
-            <h1>Less Cool Project</h1>
+        </custom-card>
+        <custom-card class="card">
+            <h2>Less Cool Project</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
             </p>
-            <form action="post">
-                <input type="image">
-                <input type="image">
-                <input type="image">
-            </form>
-        </section>
-        <section class="card">
+        </custom-card>
+        <custom-card class="card">
             <h1>Impossible App</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
             </p>
-            <form action="post">
-                <input type="image">
-                <input type="image">
-                <input type="image">
-            </form>
-        </section>
-        <section class="card">
+        </custom-card>
+        <custom-card class="card">
             <h1>Ad Blocker</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
             </p>
-            <form action="post">
-                <input type="image">
-                <input type="image">
-                <input type="image">
-            </form>
-        </section>
-        <section class="card">
+        </custom-card>
+        <custom-card class="card">
             <h1>Easy Peasy App</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
             </p>
-            <form action="post">
-                <input type="image">
-                <input type="image">
-                <input type="image">
-            </form>
-        </section>
-        <section class="card">
+        </custom-card>
+        <custom-card class="card">
             <h1>Money Maker</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
             </p>
-            <form action="post">
-                <input type="image">
-                <input type="image">
-                <input type="image">
-            </form>
-        </section>
+        </custom-card>
     </main>
     <div class="complementary">
         <aside aria-labelledby="announcements">
@@ -137,6 +108,8 @@
             <section class="card"><a href="#">@kendall</a></section>
             <section class="card"><a href="#">@alex</a></section>
         </aside>
+        <script>console.log('hello')</script>
+        <script type="module" src="/web-components/card/script.js">console.log('hey hi hello')</script>
     </div>
 </body>
 </html>

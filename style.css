@@ -20,6 +20,11 @@ nav {
     padding: 15px;
 }
 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 header {
     grid-column-start: 2;
     grid-column-end: -1;

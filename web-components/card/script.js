@@ -5,15 +5,29 @@ class CustomCard extends HTMLElement {
     render() {
         let form = document.createElement('form')
 
-        let actions = ['mdi-star-plus-outline', 'mdi-eye-plus-outline', 'mdi-share-variant-outline']
+        let actionButtons = [
+            {
+                iconName: 'mdi-star-plus-outline', 
+                ariaLabel: 'Favorite'
+            },
+            {
+                iconName: 'mdi-eye-plus-outline',
+                ariaLabel: 'View Details'
+            },
+            {
+                iconName: 'mdi-share-variant-outline',
+                ariaLabel: 'Share'
+            }
+        ]
 
-        for (let action of actions) {
+        for (let action of actionButtons) {
             let button = document.createElement('button')
 
-            let icon = document.createElement('i')
-            icon.classList.add('mdi', action)
+            let iconElement = document.createElement('i')
+            iconElement.classList.add('mdi', action.iconName)
+            button.ariaLabel = action.ariaLabel
 
-            button.append(icon)
+            button.append(iconElement)
 
             form.append(button)
         }

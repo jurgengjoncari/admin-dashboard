@@ -82,6 +82,17 @@ main > h1 {
     background-color: var(--overlay);
 }
 
+custom-card {
+    display: grid;
+}
+
+custom-card form {
+    align-self: flex-end;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .complementary {
     grid-column-start: -2;
 }

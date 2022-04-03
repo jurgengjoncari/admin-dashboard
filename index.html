@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#006161">
+    <meta name="theme-color" content="rgba(22, 22, 22, 0.94)">
     <link rel="stylesheet" href="https://jurgengjoncari.github.io/default-styles/index.css">
     <link rel="stylesheet" href="https://jurgengjoncari.github.io/web-components/form/style.css">
     <link rel="stylesheet" href="style.css">
@@ -12,105 +12,121 @@
     <title>Admin Dashboard</title>
 </head>
 <body>
-    <nav>
-        <h1><i class="mdi mdi-view-dashboard"> </i>Dashboard</h1>
-        <ul>
-            <li><i class="mdi mdi-home"></i> Home</li>
-            <li><i class="mdi mdi-account-details-outline"></i> Profile</li>
-            <li><i class="mdi mdi-message-reply"></i> Messages</li>
-            <li><i class="mdi mdi-clock-time-three"></i> History</li>
-            <li><i class="mdi mdi-file-multiple"></i> Tasks</li>
-            <li><i class="mdi mdi-account-group"></i> Communities</li>
-        </ul>
-        <ul>
-            <li><i class="mdi mdi-cog"></i> Settings</li>
-            <li><i class="mdi mdi-help-box"></i> Support</li>
-            <li><i class="mdi mdi-shield-check"></i> Privacy</li>
-        </ul>
-    </nav>
-    <header>
-        <form role="search">
-            <label for="search">Search</label>
-            <input id="search" type="search">
-        </form>
+    <header class="banner">
         <div class="user">
-            <input type="image">
-            <a href="#">Morgan Oakley</a>
+            <a href="#"><img src="/assets/avatar-5.svg" alt="Avatar" height="45" width="45"> Morgan Oakley</a>
         </div>
-        <h1><small>Hi there, </small>Morgan Oakley (@morgan)</h1>
-        <form action="" class="buttons">
-            <button>New</button>
-            <button>Upload</button>
-            <button>Share</button>
+        <h1><i class="mdi mdi-view-dashboard"> </i>Dashboard</h1>
+        <form action="" role="search">
+            <label for="search"><i class="mdi mdi-magnify"></i></label>
+            <input id="search" type="search" placeholder="Search">
         </form>
     </header>
+    <nav aria-label="primary-nav" class="horizontal-nav">
+        <ul>
+            <li><a href="" class="focused"><i class="mdi mdi-home"></i> Home</a></li>
+            <li><a href=""><i class="mdi mdi-account-details-outline"></i> Profile</a></li>
+            <li><a href=""><i class="mdi mdi-message-reply"></i> Messages</a></li>
+            <li><a href=""><i class="mdi mdi-clock-time-three"></i> History</a></li>
+            <li><a href=""><i class="mdi mdi-dots-horizontal"></i> More</a></li>
+        </ul>
+    </nav>
+    <nav aria-label="secondary-nav" class="vertical-nav">
+        <ul class="top">
+            <li><a href=""><i class="mdi mdi-file-multiple"></i> Tasks</a></li>
+            <li><a href=""><i class="mdi mdi-account-group"></i> Communities</a></li>
+        </ul>
+        <ul class="bottom">
+            <li><a href=""><i class="mdi mdi-cog"></i> Settings</a></li>
+            <li><a href=""><i class="mdi mdi-help-box"></i> Support</a></li>
+            <li><a href=""><i class="mdi mdi-shield-check"></i> Privacy</a></li>
+        </ul>
+    </nav>
     <main>
-        <h1>Your Projects</h1>
-        <custom-card class="card">
-            <h1>Super Cool Project</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
-            </p>
-        </custom-card>
-        <custom-card class="card">
-            <h2>Less Cool Project</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
-            </p>
-        </custom-card>
-        <custom-card class="card">
-            <h1>Impossible App</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
-            </p>
-        </custom-card>
-        <custom-card class="card">
-            <h1>Ad Blocker</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
-            </p>
-        </custom-card>
-        <custom-card class="card">
-            <h1>Easy Peasy App</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
-            </p>
-        </custom-card>
-        <custom-card class="card">
-            <h1>Money Maker</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
-            </p>
-        </custom-card>
+        <header>
+            <h1><small>Hi there, </small>Morgan Oakley (@morgan)</h1>
+            <form>
+                <h2>Your Projects</h2>
+                <fieldset>
+                    <button class="secondary-button">Upload</button>
+                    <button class="secondary-button">Share</button>
+                    <button class="primary-button">New</button>
+                </fieldset>
+            </form>
+        </header>
+        <div class="cards">
+            <custom-card class="card">
+                <h1>Super Cool Project</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
+                </p>
+            </custom-card>
+            <custom-card class="card">
+                <h2>Less Cool Project</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
+                </p>
+            </custom-card>
+            <custom-card class="card">
+                <h1>Impossible App</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
+                </p>
+            </custom-card>
+            <custom-card class="card">
+                <h1>Ad Blocker</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
+                </p>
+            </custom-card>
+            <custom-card class="card">
+                <h1>Easy Peasy App</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
+                </p>
+            </custom-card>
+            <custom-card class="card">
+                <h1>Money Maker</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias fugiat repellat aperiam delectus placeat libero velit repellendus a laborum. Corrupti exercitationem impedit alias quasi ullam quis perferendis neque totam!
+                </p>
+            </custom-card>
+        </div>
     </main>
     <div class="complementary">
         <aside aria-labelledby="announcements">
             <h1>Announcements</h1>
-            <section class="card">
-                <h1>Site Maintenance</h1>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius omnis rem aperiam consequatur ullam odio sit repellendus! Explicabo illo, quisquam corrupti maiores architecto iste hic adipisci, porro placeat minus quas.
-                </p>
-            </section>
-            <section class="card">
-                <h1>Community Share Day</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, tempora et maxime, sint quod nostrum maiores soluta, quo totam nisi dolorum blanditiis ratione fugiat placeat ea praesentium ipsa veniam beatae!
-                </p>
-            </section>
-            <section class="card">
-                <h1>Updated Privacy Policy</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti natus neque quaerat sapiente amet dolores totam harum porro fugiat, asperiores placeat deserunt minima sequi animi et, iusto quos quidem ut.
-                </p>
-            </section>
+            <div class="card">
+                <section>
+                    <h1>Site Maintenance</h1>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius omnis rem aperiam consequatur ullam odio sit repellendus! Explicabo illo, quisquam corrupti maiores architecto iste hic adipisci, porro placeat minus quas.
+                    </p>
+                </section>
+                <hr>
+                <section>
+                    <h1>Community Share Day</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, tempora et maxime, sint quod nostrum maiores soluta, quo totam nisi dolorum blanditiis ratione fugiat placeat ea praesentium ipsa veniam beatae!
+                    </p>
+                </section>
+                <hr>
+                <section>
+                    <h1>Updated Privacy Policy</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti natus neque quaerat sapiente amet dolores totam harum porro fugiat, asperiores placeat deserunt minima sequi animi et, iusto quos quidem ut.
+                    </p>
+                </section>
+            </div>
         </aside>
         <aside aria-labelledby="trending">
             <h1>Trending</h1>
-            <section class="card"><a href="#">@tegan</a></section>
-            <section class="card"><a href="#">@morgan</a></section>
-            <section class="card"><a href="#">@kendall</a></section>
-            <section class="card"><a href="#">@alex</a></section>
+            <div class="card">
+                <section><a href="#"><img src="/assets/avatar.svg" alt="Avatar" height="45" width="45"> @tegan</a></section>
+                <section><a href="#"><img src="/assets/avatar-5.svg" alt="Avatar" height="45" width="45"> @morgan</a></section>
+                <section><a href="#"><img src="/assets/avatar-3.svg" alt="Avatar" height="45" width="45"> @kendall</a></section>
+                <section><a href="#"><img src="/assets/avatar-2.svg" alt="Avatar" height="45" width="45"> @alex</a></section>
+            </div>
         </aside>
         <script>console.log('hello')</script>
         <script type="module" src="/web-components/card/script.js">console.log('hey hi hello')</script>
